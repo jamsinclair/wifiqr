@@ -1,0 +1,21 @@
+{
+  "name": "wifiqr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jamie Sinclair <jamsinclair+gh@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "test": "xo"
+  },
+  "dependencies": {
+    "qrcode": "^1.4.2",
+    "rollup": "^1.23.1"
+  },
+  "devDependencies": {
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "xo": "^0.25.3"
+  }
+}
