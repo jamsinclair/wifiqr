@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Wifi QR</title>
+  <link rel="stylesheet" href="./main.css?v1">
+</head>
+<body>
+  <header>
+    <h1>Wi-Fi QR Code Generator</h1>
+  </header>
+  <main>
+    <form>
+      <label>
+        SSID
+        <input name="ssid" type="text" minlength="1" maxlength="32" required>
+      </label>
+      <label>
+        Password
+        <input name="pass" type="password">
+      </label>
+      <label>
+        Security Protocol
+        <select name="protocol">
+          <option value="WPA">WPA/WPA2</option>
+          <option value="WEP">WEP</option>
+          <option value="nopass">No Password</option>
+        </select>
+      </label>
+      <label>
+        Hidden SSID
+        <input name="hidden" type="Checkbox" value="true">
+      </label>
+      <button type="submit">Generate</button>
+    </form>
+    <section class="output"></section>
+    <button class="print">Print</button>
+  </main>
+  <script src="./qrcode.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

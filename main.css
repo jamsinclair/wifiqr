@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+label {
+  margin: 0 0 1rem;
+  display: block;
+  font-size: 1.3rem;
+}
+
+input:not([type=checkbox]),
+select {
+  width: 100%;
+  padding: 5px;
+  font-size: 1.2rem;
+  border: 1px solid #000;
+}
+
+button {
+  background: lightgrey;
+  padding: 1rem; 
+  border: 0; 
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+button:hover {
+  background: darkgrey;
+}
+
+.output {
+  width: 100%;
+  max-width: 400px;
+}
+.output:empty {
+  width: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.print {
+  display: none;
+  margin: 0 2rem;
+}
+
+.show {
+  display: block;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  img {
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 400px;
+  }
+}

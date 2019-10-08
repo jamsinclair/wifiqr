@@ -5,17 +5,27 @@
   "author": "Jamie Sinclair <jamsinclair+gh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c",
-    "watch": "rollup -cw",
-    "test": "xo"
+    "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && babel main.src.js -o main.js",
+    "test": "xo ./ !bundle.js !qrcode.min.js"
   },
   "dependencies": {
-    "qrcode": "^1.4.2",
-    "rollup": "^1.23.1"
+    "qrcode": "^1.4.2"
   },
   "devDependencies": {
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "xo": "^0.25.3"
+  },
+  "browserslist": [
+    "> 1%"
+  ],
+  "xo": {
+    "global": [
+      "window",
+      "document",
+      "FormData",
+      "QRCode"
+    ]
   }
 }
