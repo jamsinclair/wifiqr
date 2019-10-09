@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && babel main.src.js -o main.js",
-    "test": "xo ./ !bundle.js !qrcode.min.js"
+    "test": "xo"
   },
   "dependencies": {
     "qrcode": "^1.4.2"
@@ -26,6 +26,10 @@
       "document",
       "FormData",
       "QRCode"
+    ],
+    "ignores": [
+      "main.js",
+      "qrcode.min.js"
     ]
   }
 }
