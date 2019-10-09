@@ -2,7 +2,7 @@
   "name": "wifiqr",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Jamie Sinclair <jamsinclair+gh@gmail.com>",
+  "author": "Jamie Sinclair <jamsinclairnz+gh@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && babel src.js -o dist.js",
