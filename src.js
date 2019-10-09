@@ -38,7 +38,7 @@ form.addEventListener('submit', event => {
 	const code = getWifiCode.call(null, ...formData.values());
 	QRCode.toDataURL(code, {width: 800, height: 800})
 		.then(dataUri => {
-			document.querySelector('.code').innerHTML = `<img src=${dataUri}> alt="Generated Wifi QR Code">`;
+			document.querySelector('.code').innerHTML = `<img src=${dataUri} alt="Generated Wifi QR Code">`;
 			document.querySelector('.output').style = 'display: block';
 		});
 });

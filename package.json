@@ -5,7 +5,7 @@
   "author": "Jamie Sinclair <jamsinclair+gh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && babel main.src.js -o main.js",
+    "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && babel src.js -o dist.js",
     "test": "xo"
   },
   "dependencies": {
@@ -28,7 +28,7 @@
       "QRCode"
     ],
     "ignores": [
-      "main.js",
+      "dist.js",
       "qrcode.min.js"
     ]
   }

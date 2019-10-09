@@ -53,7 +53,7 @@ form.addEventListener('submit', function (event) {
     width: 800,
     height: 800
   }).then(function (dataUri) {
-    document.querySelector('.code').innerHTML = "<img src=".concat(dataUri, "> alt=\"Generated Wifi QR Code\">");
+    document.querySelector('.code').innerHTML = "<img src=".concat(dataUri, " alt=\"Generated Wifi QR Code\">");
     document.querySelector('.output').style = 'display: block';
   });
 });
