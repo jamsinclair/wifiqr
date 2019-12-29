@@ -5,7 +5,7 @@
   "author": "Jamie Sinclair <jamsinclairnz+gh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && babel src.js -o dist.js",
+    "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && babel src.js -o dist.js && ./scripts/update-integrity.sh",
     "test": "xo"
   },
   "dependencies": {
