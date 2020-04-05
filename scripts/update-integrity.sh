@@ -3,9 +3,9 @@ updateIntegrity () {
   match="src=\".\/$1\" integrity=\".*\""
   replace="src=\".\/$1\" integrity=\"sha384-$hash\""
   if [[ "$OSTYPE" == "darwin"* ]]; then
-    sed -i '' -e "s/$match/$replace/" index.html
+    sed -i '' -e "s#$match#$replace#" index.html
   else
-    sed -i -e "s/$match/$replace/" index.html
+    sed -i -e "s#$match#$replace#" index.html
   fi
 }
 
