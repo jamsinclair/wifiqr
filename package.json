@@ -5,16 +5,13 @@
   "author": "Jamie Sinclair <jamsinclairnz+gh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && babel src.js -o dist.js && ./scripts/update-integrity.sh",
+    "build": "cp node_modules/qrcode/build/qrcode.min.js ./ && ./scripts/update-integrity.sh",
     "test": "xo"
   },
   "dependencies": {
     "qrcode": "^1.4.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.5",
-    "@babel/core": "^7.14.6",
-    "@babel/preset-env": "^7.14.7",
     "xo": "^0.41.0"
   },
   "browserslist": [
@@ -27,8 +24,11 @@
       "FormData",
       "QRCode"
     ],
+    "rules": {
+      "unicorn/prefer-module": "off",
+      "unicorn/prevent-abbreviations": "off"
+    },
     "ignores": [
-      "dist.js",
       "qrcode.min.js"
     ]
   }

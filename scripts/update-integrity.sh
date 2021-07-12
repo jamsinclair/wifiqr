@@ -10,4 +10,4 @@ updateIntegrity () {
 }
 
 updateIntegrity qrcode.min.js
-updateIntegrity dist.js
+updateIntegrity main.js
